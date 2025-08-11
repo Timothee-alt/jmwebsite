@@ -75,7 +75,7 @@ export const ContactSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-broadway text-4xl md:text-6xl text-elvis-red neon-text uppercase mb-4">
+          <h2 className="font-broadway text-4xl md:text-6xl text-elvis-gold uppercase mb-4">
             Contact
           </h2>
           <p className="text-elvis-gold font-bebas text-xl uppercase tracking-wider">
@@ -113,7 +113,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="Votre nom"
                     />
                     {errors.name && (
-                      <p className="text-elvis-red text-sm mt-1">{errors.name.message}</p>
+                      <p className="text-elvis-gold text-sm mt-1">{errors.name.message}</p>
                     )}
                   </div>
 
@@ -134,7 +134,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="votre@email.com"
                     />
                     {errors.email && (
-                      <p className="text-elvis-red text-sm mt-1">{errors.email.message}</p>
+                      <p className="text-elvis-gold text-sm mt-1">{errors.email.message}</p>
                     )}
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export const ContactSection: React.FC = () => {
                       ))}
                     </select>
                     {errors.eventType && (
-                      <p className="text-elvis-red text-sm mt-1">{errors.eventType.message}</p>
+                      <p className="text-elvis-gold text-sm mt-1">{errors.eventType.message}</p>
                     )}
                   </div>
                 </div>
@@ -211,7 +211,7 @@ export const ContactSection: React.FC = () => {
                     placeholder="Décrivez-nous votre projet, vos attentes, le lieu, etc."
                   ></textarea>
                   {errors.message && (
-                    <p className="text-elvis-red text-sm mt-1">{errors.message.message}</p>
+                    <p className="text-elvis-gold text-sm mt-1">{errors.message.message}</p>
                   )}
                 </div>
 

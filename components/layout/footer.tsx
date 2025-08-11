@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-4 mb-6">
                 <TCBLightning size={60} />
                 <div>
-                  <h3 className="font-broadway text-3xl text-elvis-red neon-text">
+                  <h3 className="font-broadway text-3xl text-elvis-gold">
                     ELVIS
                   </h3>
                   <p className="font-bebas text-lg text-elvis-gold uppercase tracking-wider">
@@ -139,7 +139,7 @@ export const Footer: React.FC = () => {
                     className="flex-1 px-3 py-2 bg-elvis-black border-2 border-elvis-gold rounded-l-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-blue text-sm"
                   />
                   <motion.button
-                    className="px-4 py-2 bg-elvis-gold text-elvis-black border-2 border-elvis-gold rounded-r-lg hover:bg-elvis-red hover:border-elvis-red transition-colors duration-300"
+                    className="px-4 py-2 bg-elvis-gold text-elvis-black border-2 border-elvis-gold rounded-r-lg hover:bg-elvis-gold hover:border-elvis-gold transition-colors duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

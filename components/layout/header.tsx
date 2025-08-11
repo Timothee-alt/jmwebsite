@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
               className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 drop-shadow-[0_0_14px_rgba(212,175,55,0.6)]"
             />
             <div className="block">
-              <h1 className="font-broadway text-xl sm:text-2xl lg:text-3xl text-elvis-red neon-text leading-none">
+              <h1 className="font-broadway text-xl sm:text-2xl lg:text-3xl text-elvis-gold neon-text leading-none">
                 JESSY MORGAN
               </h1>
               <p className="text-elvis-gold text-xs sm:text-sm font-bebas tracking-wider">

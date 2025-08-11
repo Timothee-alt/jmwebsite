@@ -29,8 +29,8 @@ export const ElvisButton: React.FC<ElvisButtonProps> = ({
   const baseClasses = "relative font-bebas uppercase tracking-wider transition-all duration-300 border-2 rounded-lg vegas-stud overflow-hidden";
   
   const variantClasses = {
-    primary: "bg-elvis-red border-elvis-gold text-elvis-white hover:bg-elvis-gold hover:shadow-neon-blue",
-    secondary: "bg-transparent border-elvis-gold text-elvis-red hover:bg-elvis-red hover:text-elvis-white hover:shadow-scintillant",
+    primary: "bg-elvis-gold border-elvis-gold text-elvis-black hover:shadow-scintillant",
+    secondary: "bg-transparent border-elvis-gold text-elvis-gold hover:bg-elvis-gold hover:text-elvis-black hover:shadow-scintillant",
   };
   
   const sizeClasses = {
@@ -53,7 +53,7 @@ export const ElvisButton: React.FC<ElvisButtonProps> = ({
       )}
       whileHover={{ 
         scale: disabled ? 1 : 1.05,
-        boxShadow: variant === 'primary' ? '0 0 20px #00BFFF' : '0 0 20px #D4AF37'
+        boxShadow: '0 0 20px #D4AF37'
       }}
       whileTap={{ scale: disabled ? 1 : 0.95 }}
       animate={{

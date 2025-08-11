@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { Header } from '@/components/layout/header';
 import { HeroSection } from '@/components/sections/hero';
-import { BiographySection } from '@/components/sections/biography';
+import BiographySection from '@/components/sections/biography';
 import { ShowsSection } from '@/components/sections/shows';
 import { GallerySection } from '@/components/sections/gallery';
 import { ContactSection } from '@/components/sections/contact';

@@ -59,7 +59,7 @@ export const HeroSection: React.FC = () => {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={`beam-${i}`}
-            className="absolute -left-1/4 top-0 h-[200%] w-1/3 bg-gradient-to-r from-transparent via-amber-200/20 to-transparent blur-3xl"
+            className="absolute -left-1/4 top-0 h-[200%] w-1/3 bg-gradient-to-r from-transparent via-[rgba(212,175,55,0.2)] to-transparent blur-3xl"
             style={{ rotate: -25 + i * 15 }}
             animate={{ x: ['-20%', '120%'], opacity: [0.05, 0.18, 0.05] }}
             transition={{ duration: 8 + i * 2, repeat: Infinity, ease: 'easeInOut', delay: i * 1.2 }}
@@ -81,7 +81,7 @@ export const HeroSection: React.FC = () => {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={`bokeh-${i}`}
-            className="absolute rounded-full bg-amber-200/10 blur-3xl"
+            className="absolute rounded-full bg-[rgba(212,175,55,0.1)] blur-3xl"
             style={{
               width: `${60 + Math.random() * 140}px`,
               height: `${60 + Math.random() * 140}px`,
@@ -208,7 +208,7 @@ export const HeroSection: React.FC = () => {
           >
             <a
               href="#contact"
-              className="px-6 sm:px-8 py-3 rounded-full bg-elvis-red text-white font-bebas tracking-widest uppercase shadow-neon-red hover:shadow-neon-gold transition-all duration-300 hover:-translate-y-0.5"
+              className="px-6 sm:px-8 py-3 rounded-full bg-elvis-gold text-elvis-black font-bebas tracking-widest uppercase shadow-neon-gold hover:shadow-neon-gold transition-all duration-300 hover:-translate-y-0.5"
             >
               Réserver maintenant
             </a>

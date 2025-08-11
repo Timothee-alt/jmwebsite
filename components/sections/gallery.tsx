@@ -86,7 +86,7 @@ export const GallerySection: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-broadway text-4xl md:text-6xl text-elvis-red neon-text uppercase mb-4">
+          <h2 className="font-broadway text-4xl md:text-6xl text-elvis-gold uppercase mb-4">
             Galerie
           </h2>
           <p className="text-elvis-gold font-bebas text-xl uppercase tracking-wider">

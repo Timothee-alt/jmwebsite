@@ -72,7 +72,7 @@ export const ShowsSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-broadway text-4xl md:text-6xl text-elvis-red neon-text uppercase mb-4">
+          <h2 className="font-broadway text-4xl md:text-6xl text-elvis-gold neon-text uppercase mb-4">
             Spectacles
           </h2>
           <p className="text-elvis-gold font-bebas text-xl uppercase tracking-wider">
@@ -102,12 +102,12 @@ export const ShowsSection: React.FC = () => {
               {show.featured && (
                 <div className="absolute top-4 left-4 z-20">
                   <motion.div
-                    className="bg-elvis-red px-3 py-1 rounded-full flex items-center gap-2"
+                    className="bg-elvis-gold text-elvis-black px-3 py-1 rounded-full flex items-center gap-2"
                     animate={{
                       boxShadow: [
-                        '0 0 5px #C8102E',
-                        '0 0 15px #C8102E',
-                        '0 0 5px #C8102E'
+                        '0 0 5px #D4AF37',
+                        '0 0 15px #D4AF37',
+                        '0 0 5px #D4AF37'
                       ]
                     }}
                     transition={{
@@ -116,8 +116,8 @@ export const ShowsSection: React.FC = () => {
                       ease: "easeInOut"
                     }}
                   >
-                    <Star className="w-4 h-4 text-elvis-gold" fill="currentColor" />
-                    <span className="text-elvis-white font-bebas text-sm uppercase">
+                    <Star className="w-4 h-4 text-elvis-black" fill="currentColor" />
+                    <span className="text-elvis-black font-bebas text-sm uppercase">
                       À l'affiche
                     </span>
                   </motion.div>
@@ -136,7 +136,7 @@ export const ShowsSection: React.FC = () => {
               <div className={`relative z-10 p-6 ${show.featured ? 'md:p-8' : ''}`}>
                 <div className={`${show.featured ? 'md:flex md:items-center md:gap-8' : ''}`}>
                   <div className={`${show.featured ? 'md:flex-1' : ''}`}>
-                    <h3 className={`font-broadway ${show.featured ? 'text-3xl md:text-4xl' : 'text-2xl'} text-elvis-red neon-text uppercase mb-3`}>
+                    <h3 className={`font-broadway ${show.featured ? 'text-3xl md:text-4xl' : 'text-2xl'} text-elvis-gold neon-text uppercase mb-3`}>
                       {show.title}
                     </h3>
                     
