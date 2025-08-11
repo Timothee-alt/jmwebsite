@@ -100,32 +100,58 @@ const TimelineCard = ({ item, index }: TimelineCardProps) => {
 
   return (
     <motion.div
-      className={`flex items-center mb-20 ${item.position === 'left' ? '' : 'flex-row-reverse'}`}
+      className={`relative flex flex-col md:flex-row items-start md:items-center mb-8 md:mb-20 ${item.position === 'left' ? '' : 'md:flex-row-reverse'}`}
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      <div className={`w-5/12 ${item.position === 'right' ? 'text-right' : ''}`}>
+      {/* Mobile timeline indicator */}
+      <div className="flex md:hidden items-center w-full mb-4">
+        <motion.div 
+          className="flex items-center gap-3"
+          initial={{ x: -20, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+        >
+          <motion.div 
+            className="p-2 rounded-lg bg-elvis-gold border border-elvis-gold shadow-neon-gold"
+            variants={iconVariants}
+          >
+            <item.icon className="w-4 h-4 text-white" />
+          </motion.div>
+          <motion.span 
+            className="text-2xl font-bold text-elvis-gold"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
+          >
+            {item.year}
+          </motion.span>
+        </motion.div>
+        <div className="flex-1 h-px bg-elvis-gold/30 ml-4"></div>
+      </div>
+      <div className={`w-full md:w-5/12 ${item.position === 'right' ? 'md:text-right' : ''}`}>
         <motion.div
           className="relative group"
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
           <div 
-            className="relative bg-cover bg-center border-2 border-elvis-gold/30 rounded-xl p-8 shadow-vegas-glow"
+            className="relative bg-cover bg-center border-2 border-elvis-gold/30 rounded-xl p-4 md:p-8 shadow-vegas-glow"
             style={{ backgroundImage: `url(${goldGlitter.src})` }}
           >
             {/* Blur overlay for readability */}
-            <div className="absolute inset-0 rounded-xl bg-black/45 backdrop-blur-sm pointer-events-none" />
-            {/* Decorative corner elements */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-elvis-gold/40 rounded-tl-xl z-10"></div>
-            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-elvis-gold/40 rounded-tr-xl z-10"></div>
-            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-elvis-gold/40 rounded-bl-xl z-10"></div>
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-elvis-gold/40 rounded-br-xl z-10"></div>
+            <div className="absolute inset-0 rounded-xl bg-black/50 md:bg-black/45 backdrop-blur-sm pointer-events-none" />
+            {/* Decorative corner elements - smaller on mobile */}
+            <div className="absolute top-0 left-0 w-4 h-4 md:w-8 md:h-8 border-t-2 border-l-2 border-elvis-gold/40 rounded-tl-xl z-10"></div>
+            <div className="absolute top-0 right-0 w-4 h-4 md:w-8 md:h-8 border-t-2 border-r-2 border-elvis-gold/40 rounded-tr-xl z-10"></div>
+            <div className="absolute bottom-0 left-0 w-4 h-4 md:w-8 md:h-8 border-b-2 border-l-2 border-elvis-gold/40 rounded-bl-xl z-10"></div>
+            <div className="absolute bottom-0 right-0 w-4 h-4 md:w-8 md:h-8 border-b-2 border-r-2 border-elvis-gold/40 rounded-br-xl z-10"></div>
 
             <div className="relative z-10">
-              <div className={`flex items-center gap-4 mb-4 ${item.position === 'right' ? 'flex-row-reverse' : ''}`}>
+              {/* Desktop header */}
+              <div className={`hidden md:flex items-center gap-4 mb-4 ${item.position === 'right' ? 'md:flex-row-reverse' : ''}`}>
                 <motion.div 
                   className={`p-3 rounded-xl bg-elvis-gold border border-elvis-gold shadow-neon-gold`}
                   variants={iconVariants}
@@ -144,7 +170,7 @@ const TimelineCard = ({ item, index }: TimelineCardProps) => {
               </div>
               
               <motion.h3 
-                className="text-xl font-bold text-elvis-white uppercase mb-3 tracking-wide"
+                className="text-lg md:text-xl font-bold text-elvis-white uppercase mb-2 md:mb-3 tracking-wide"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 + 0.4 }}
@@ -153,7 +179,7 @@ const TimelineCard = ({ item, index }: TimelineCardProps) => {
               </motion.h3>
               
               <motion.p 
-                className="text-elvis-white/90 leading-relaxed"
+                className="text-sm md:text-base text-elvis-white/90 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 + 0.6 }}
@@ -170,8 +196,8 @@ const TimelineCard = ({ item, index }: TimelineCardProps) => {
         </motion.div>
       </div>
 
-      {/* Timeline connector dot */}
-      <div className="w-2/12 flex justify-center">
+      {/* Desktop timeline connector dot */}
+      <div className="hidden md:flex md:w-2/12 md:justify-center">
         <motion.div 
           className="relative"
           initial={{ scale: 0 }}
@@ -199,7 +225,7 @@ const TimelineCard = ({ item, index }: TimelineCardProps) => {
         </motion.div>
       </div>
 
-      <div className="w-5/12"></div>
+      <div className="hidden md:block md:w-5/12"></div>
     </motion.div>
   );
 };
@@ -237,7 +263,7 @@ const AnimatedTimeline = () => {
 export default function BiographySection() {
   return (
     <section 
-      className="relative py-20 overflow-hidden bg-gradient-to-b from-elvis-black/95 to-elvis-black"
+      className="relative py-12 md:py-20 overflow-hidden bg-gradient-to-b from-elvis-black/95 to-elvis-black"
     >
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 opacity-20">
@@ -247,22 +273,22 @@ export default function BiographySection() {
         <div className="absolute bottom-20 right-16 w-2 h-2 bg-elvis-blue rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16 px-4"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <motion.h2 
-            className="font-broadway text-6xl md:text-7xl text-elvis-gold neon-text uppercase mb-4"
+            className="font-broadway text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-elvis-gold neon-text uppercase mb-3 md:mb-4"
           >
             La Légende
           </motion.h2>
           
           <motion.p 
-            className="text-yellow-400 text-xl uppercase tracking-widest font-semibold"
+            className="text-yellow-400 text-sm sm:text-base md:text-xl uppercase tracking-widest font-semibold px-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -271,52 +297,162 @@ export default function BiographySection() {
           </motion.p>
           
           <motion.div 
-            className="w-24 h-1 bg-elvis-gold mx-auto mt-6 rounded-full"
+            className="w-16 md:w-24 h-1 bg-elvis-gold mx-auto mt-4 md:mt-6 rounded-full"
             initial={{ width: 0 }}
-            animate={{ width: 96 }}
+            animate={{ width: "100%" }}
             transition={{ duration: 1, delay: 0.8 }}
           />
         </motion.div>
 
         {/* Animated Timeline */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-2 md:px-0">
           <AnimatedTimeline />
         </div>
 
         {/* Quote finale */}
         <motion.div
-          className="mt-20 text-center max-w-4xl mx-auto"
+          className="mt-16 md:mt-20 text-center max-w-4xl mx-auto px-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div 
-            className="bg-elvis-black/90 border-2 border-elvis-gold/30 rounded-2xl p-8 backdrop-blur-sm shadow-vegas-glow"
+          <motion.div 
+            className="relative group"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
           >
-            <motion.blockquote 
-              className="text-2xl md:text-3xl text-elvis-gold italic mb-4 leading-relaxed"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              "J'ai toujours été un rêveur. Si vous croyez en vos rêves, 
-              ils peuvent devenir réalité."
-            </motion.blockquote>
+            {/* Background avec effet de parallaxe */}
+            <div 
+              className="absolute inset-0 rounded-2xl bg-cover bg-center opacity-30"
+              style={{ backgroundImage: `url(${goldGlitter.src})` }}
+            />
             
-            <motion.div 
-              className="flex items-center justify-center space-x-4 mt-6"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+            {/* Bordures animées */}
+            <div className="absolute inset-0 rounded-2xl border-2 border-elvis-gold/40 
+                          before:absolute before:inset-0 before:rounded-2xl before:border-2 before:border-elvis-gold/20 
+                          before:animate-pulse before:duration-2000" />
+            
+            {/* Coins décoratifs avec animation */}
+            <div className="absolute -top-2 -left-2 w-6 h-6 md:w-8 md:h-8">
+              <motion.div 
+                className="w-full h-full border-t-2 border-l-2 border-elvis-gold rounded-tl-2xl"
+                animate={{ 
+                  boxShadow: ['0 0 5px rgba(212, 175, 55, 0.3)', '0 0 20px rgba(212, 175, 55, 0.6)', '0 0 5px rgba(212, 175, 55, 0.3)']
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </div>
+            <div className="absolute -top-2 -right-2 w-6 h-6 md:w-8 md:h-8">
+              <motion.div 
+                className="w-full h-full border-t-2 border-r-2 border-elvis-gold rounded-tr-2xl"
+                animate={{ 
+                  boxShadow: ['0 0 5px rgba(212, 175, 55, 0.3)', '0 0 20px rgba(212, 175, 55, 0.6)', '0 0 5px rgba(212, 175, 55, 0.3)']
+                }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              />
+            </div>
+            <div className="absolute -bottom-2 -left-2 w-6 h-6 md:w-8 md:h-8">
+              <motion.div 
+                className="w-full h-full border-b-2 border-l-2 border-elvis-gold rounded-bl-2xl"
+                animate={{ 
+                  boxShadow: ['0 0 5px rgba(212, 175, 55, 0.3)', '0 0 20px rgba(212, 175, 55, 0.6)', '0 0 5px rgba(212, 175, 55, 0.3)']
+                }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              />
+            </div>
+            <div className="absolute -bottom-2 -right-2 w-6 h-6 md:w-8 md:h-8">
+              <motion.div 
+                className="w-full h-full border-b-2 border-r-2 border-elvis-gold rounded-br-2xl"
+                animate={{ 
+                  boxShadow: ['0 0 5px rgba(212, 175, 55, 0.3)', '0 0 20px rgba(212, 175, 55, 0.6)', '0 0 5px rgba(212, 175, 55, 0.3)']
+                }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
+              />
+            </div>
+
+            <div 
+              className="relative bg-elvis-black/95 backdrop-blur-md rounded-2xl p-6 md:p-10 shadow-2xl overflow-hidden"
+              style={{
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.15)'
+              }}
             >
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-elvis-gold"></div>
-              <p className="text-elvis-gold font-semibold uppercase tracking-wider">
-                Elvis Presley
-              </p>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-elvis-gold"></div>
-            </motion.div>
-          </div>
+              {/* Effet de brillance en survol */}
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-elvis-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                animate={{
+                  x: ['-100%', '100%']
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatDelay: 2
+                }}
+              />
+
+              {/* Guillemets décoratifs */}
+              <motion.div 
+                className="absolute top-4 left-4 md:top-6 md:left-6 text-4xl md:text-6xl text-elvis-gold/20 font-serif"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                "
+              </motion.div>
+              <motion.div 
+                className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-4xl md:text-6xl text-elvis-gold/20 font-serif rotate-180"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                "
+              </motion.div>
+
+              <div className="relative z-10">
+                <motion.blockquote 
+                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-elvis-gold italic mb-6 md:mb-8 leading-relaxed font-light px-4 md:px-8"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                  J'ai toujours été un rêveur. Si vous croyez en vos rêves, 
+                  ils peuvent devenir réalité.
+                </motion.blockquote>
+                
+                {/* Séparateur élégant */}
+                <motion.div 
+                  className="flex items-center justify-center mb-4 md:mb-6"
+                  initial={{ opacity: 0, width: 0 }}
+                  whileInView={{ opacity: 1, width: "auto" }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-elvis-gold rounded-full animate-pulse"></div>
+                    <div className="h-px w-12 md:w-20 bg-gradient-to-r from-elvis-gold via-elvis-gold/50 to-elvis-gold"></div>
+                    <div className="w-3 h-3 bg-elvis-gold rounded-full"></div>
+                    <div className="h-px w-12 md:w-20 bg-gradient-to-l from-elvis-gold via-elvis-gold/50 to-elvis-gold"></div>
+                    <div className="w-2 h-2 bg-elvis-gold rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="flex items-center justify-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                >
+                  <div className="bg-elvis-gold/10 backdrop-blur-sm rounded-full px-6 md:px-8 py-3 md:py-4 border border-elvis-gold/30">
+                    <p className="text-elvis-gold font-semibold uppercase tracking-widest text-sm md:text-base">
+                      Elvis Presley
+                    </p>
+                    <p className="text-elvis-gold/70 text-xs md:text-sm mt-1 tracking-wider">
+                      The King of Rock'n'Roll
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import { HeroSection } from '@/components/sections/hero';
 import BiographySection from '@/components/sections/biography';
 import { ShowsSection } from '@/components/sections/shows';
 import { GallerySection } from '@/components/sections/gallery';
+import VideoSection from '@/components/sections/video';
 import { ContactSection } from '@/components/sections/contact';
 import { Footer } from '@/components/layout/footer';
 
@@ -51,6 +52,7 @@ export default function Home() {
         <BiographySection />
         <ShowsSection />
         <GallerySection />
+        <VideoSection />
         <ContactSection />
       </main>
       <Footer />
