@@ -63,10 +63,10 @@ export const Footer: React.FC = () => {
                   </motion.div>
                   <div>
                     <h3 className="font-broadway text-2xl md:text-3xl lg:text-4xl text-elvis-gold neon-text">
-                      ELVIS
+                      Jessy Morgan
                     </h3>
                     <p className="font-bebas text-base md:text-lg text-elvis-gold uppercase tracking-wider">
-                      Impresario
+                      Animateur et impresario Elvis Presley
                     </p>
                   </div>
                 </div>
