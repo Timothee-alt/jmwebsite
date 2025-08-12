@@ -15,60 +15,53 @@ import 'swiper/css/effect-coverflow';
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=800",
+    src: "/jessymorgan_1.webp",
     title: "Elvis en concert",
     description: "Performance électrisante sur scène",
     category: "concert"
   },
   {
     id: 2,
-    src: "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Le Cuir Noir",
-    description: "Tenue iconique du Comeback Special",
+    src: "jessymorgan_4.webp",
+    title: "La tenue de Jessy Morgan",
+    description: "Tenue iconique",
     category: "costume"
   },
   {
     id: 3,
-    src: "https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Vegas Lights",
-    description: "L'atmosphère magique de Las Vegas",
-    category: "vegas"
+    src: "jessymorgan_2.webp",
+    title: "Couverture de magazine",
+    description: "à la une",
+    category: "magazine"
   },
   {
     id: 4,
-    src: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Studio Session",
-    description: "En studio d'enregistrement",
-    category: "studio"
+    src: "jessymorgan_3.webp",
+    title: "Concert",
+    description: "En concert",
+    category: "concert"
   },
   {
     id: 5,
-    src: "https://images.pexels.com/photos/442540/pexels-photo-442540.jpeg?auto=compress&cs=tinysrgb&w=800",
+    src: "jessymorgan_5.webp",
     title: "Guitare Acoustique",
     description: "Moment intimiste musical",
     category: "intimiste"
   },
   {
     id: 6,
-    src: "https://images.pexels.com/photos/1756927/pexels-photo-1756927.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Scène Vintage",
-    description: "Ambiance rétro des années 50",
-    category: "vintage"
+    src: "jessymorgan_6.webp",
+    title: "Préparation",
+    description: "Préparation pour le concert",
+    category: "concert"
   },
   {
     id: 7,
-    src: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Microphone Vintage",
-    description: "Équipement d'époque authentique",
-    category: "vintage"
+    src: "jessymorgan_7.webp",
+    title: "En couverture",
+    description: "Couverture d'un magazine",
+    category: "magazine"
   },
-  {
-    id: 8,
-    src: "https://images.pexels.com/photos/744318/pexels-photo-744318.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Performance Live",
-    description: "Énergie pure sur scène",
-    category: "concert"
-  }
 ];
 
 export const GallerySection: React.FC = () => {

@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
                 </div>
               
                 <p className="text-elvis-white/90 leading-relaxed mb-6 max-w-md text-sm md:text-base">
-                  Depuis plus de 10 ans, nous perpétuons la magie d'Elvis Presley à travers 
+                  Depuis plus de 20 ans, nous perpétuons la magie d'Elvis Presley à travers 
                   des spectacles authentiques et émouvants. Le King vit éternellement à travers 
                   notre passion et notre respect de son héritage musical.
                 </p>

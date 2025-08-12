@@ -88,13 +88,16 @@
 
 ::-webkit-scrollbar-track {
   background: #000000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #C8102E 0%, #D4AF37 100%);
   border-radius: 4px;
 }
 
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4AF37 0%, #B8941F 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #D4AF37 0%, #C8102E 100%);
+  background: linear-gradient(180deg, #F4D03F 0%, #D4AF37 100%);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.8);
 }

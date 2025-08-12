@@ -126,7 +126,7 @@ export const ContactSection: React.FC = () => {
                     </label>
                     <input
                       {...register('name', { required: 'Le nom est requis' })}
-                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-blue focus:shadow-neon-blue focus:bg-elvis-black transition-all duration-300"
+                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-gold focus:shadow-neon-gold focus:bg-elvis-black transition-all duration-300"
                       placeholder="Votre nom"
                     />
                     {errors.name && (
@@ -147,7 +147,7 @@ export const ContactSection: React.FC = () => {
                         }
                       })}
                       type="email"
-                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-blue focus:shadow-neon-blue focus:bg-elvis-black transition-all duration-300"
+                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-gold focus:shadow-neon-gold focus:bg-elvis-black transition-all duration-300"
                       placeholder="votre@email.com"
                     />
                     {errors.email && (
@@ -165,7 +165,7 @@ export const ContactSection: React.FC = () => {
                     <input
                       {...register('phone')}
                       type="tel"
-                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-blue focus:shadow-neon-blue focus:bg-elvis-black transition-all duration-300"
+                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-gold focus:shadow-neon-gold focus:bg-elvis-black transition-all duration-300"
                       placeholder="06 XX XX XX XX"
                     />
                   </div>
@@ -176,7 +176,7 @@ export const ContactSection: React.FC = () => {
                     </label>
                     <select
                       {...register('eventType', { required: 'Veuillez sélectionner un type d\'événement' })}
-                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white focus:outline-none focus:border-elvis-blue focus:shadow-neon-blue focus:bg-elvis-black transition-all duration-300"
+                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white focus:outline-none focus:border-elvis-gold focus:shadow-neon-gold focus:bg-elvis-black transition-all duration-300"
                     >
                       <option value="">Sélectionnez...</option>
                       {eventTypes.map(type => (
@@ -198,7 +198,7 @@ export const ContactSection: React.FC = () => {
                     <input
                       {...register('date')}
                       type="date"
-                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white focus:outline-none focus:border-elvis-blue focus:shadow-neon-blue focus:bg-elvis-black transition-all duration-300"
+                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white focus:outline-none focus:border-elvis-gold focus:shadow-neon-gold focus:bg-elvis-black transition-all duration-300"
                     />
                   </div>
 
@@ -209,7 +209,7 @@ export const ContactSection: React.FC = () => {
                     <input
                       {...register('guests', { min: 1 })}
                       type="number"
-                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-blue focus:shadow-neon-blue focus:bg-elvis-black transition-all duration-300"
+                      className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-gold focus:shadow-neon-gold focus:bg-elvis-black transition-all duration-300"
                       placeholder="Ex: 100"
                       min="1"
                     />
@@ -224,7 +224,7 @@ export const ContactSection: React.FC = () => {
                   <textarea
                     {...register('message', { required: 'Veuillez nous parler de votre projet' })}
                     rows={5}
-                    className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-blue focus:shadow-neon-blue focus:bg-elvis-black transition-all duration-300 resize-none"
+                    className="w-full px-4 py-2 md:py-3 bg-elvis-black/80 border-2 border-elvis-gold/50 rounded-lg text-elvis-white placeholder-elvis-pink/60 focus:outline-none focus:border-elvis-gold focus:shadow-neon-gold focus:bg-elvis-black transition-all duration-300 resize-none"
                     placeholder="Décrivez-nous votre projet, vos attentes, le lieu, etc."
                   ></textarea>
                   {errors.message && (
