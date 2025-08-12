@@ -31,19 +31,19 @@ export const ContactSection: React.FC = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@elvis-impresario.fr",
+      value: "jessymorgan@wanadoo.fr",
       description: "Réponse sous 24h"
     },
     {
       icon: Phone,
       title: "Téléphone",
-      value: "+33 1 42 XX XX XX",
+      value: "+33 6 08 68 29 57",
       description: "Lun-Ven 9h-18h"
     },
     {
       icon: MapPin,
       title: "Localisation",
-      value: "Paris, France",
+      value: "Lannion, Bretagne, France",
       description: "Déplacements en France et Europe"
     },
     {

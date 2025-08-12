@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <Mail className="w-4 h-4 text-elvis-gold" />
-                    <span>contact@elvis-impresario.fr</span>
+                    <span>jessymorgan@wanadoo.fr</span>
                   </motion.div>
                   <motion.div 
                     className="flex items-center gap-2"
@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <Phone className="w-4 h-4 text-elvis-gold" />
-                    <span>+33 1 42 XX XX XX</span>
+                    <span>+33 6 08 68 29 57</span>
                   </motion.div>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export const Footer: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                © {currentYear} Elvis Impresario. Tous droits réservés. | 
+                © {currentYear} Jessy Morgan. Tous droits réservés. | 
                 <span className="ml-1 text-elvis-pink font-semibold">Taking Care of Business</span>
               </motion.p>
               

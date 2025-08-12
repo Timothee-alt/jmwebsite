@@ -20,6 +20,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://elvis-impresario.fr'),
   title: 'Elvis Impresario - Spectacles Tribute Elvis Presley | Shows & Événements',
   description: 'Découvrez les meilleurs spectacles tribute à Elvis Presley. Réservez votre show authentique avec costumes d\'époque, de Tupelo à Las Vegas. Disponible pour événements privés et concerts publics en France.',
   keywords: 'Elvis Presley, tribute, spectacle, impresario, concert, Vegas, rock and roll, événement privé, booking',
@@ -55,8 +56,8 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/elvishead.ico', sizes: '16x16', type: 'image/ico' },
+      { url: '/elvishead.ico', sizes: '32x32', type: 'image/ico' },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180' },

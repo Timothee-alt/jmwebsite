@@ -63,7 +63,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'elvis-gradient': 'linear-gradient(135deg, #C8102E 0%, #D4AF37 100%)',
+        'elvis-gradient': 'linear-gradient(135deg, #F7DC6F 0%, #D4AF37 100%)',
         'neon-gradient': 'linear-gradient(90deg, #C8102E, #D4AF37, #00BFFF)',
         'vegas-lights': 'radial-gradient(ellipse at center, rgba(212, 175, 55, 0.3) 0%, rgba(0, 0, 0, 0.9) 70%)',
       },
