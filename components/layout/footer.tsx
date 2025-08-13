@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Youtube, Mail, Phone } from 'lucide-react';
 import boltImage from '@/components/public/bolt.png';
+import breizhLogo from '@/public/Breizh.png';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -212,7 +213,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-elvis-gold/30 py-6 md:py-8 bg-elvis-black/50 backdrop-blur-sm">
-                      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
               <motion.p
                 className="text-elvis-white/70 text-xs md:text-sm text-center md:text-left"
@@ -255,6 +256,40 @@ export const Footer: React.FC = () => {
                 </motion.a>
               </motion.div>
             </div>
+            
+            {/* Breizh Web Solution Attribution */}
+            <motion.div
+              className="flex flex-col items-center justify-center mt-6 pt-6 border-t border-elvis-gold/20"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <motion.a
+                href="https://bwswebsite.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-elvis-white/60 hover:text-elvis-gold transition-all duration-300 group"
+                whileHover={{ scale: 1.05 }}
+              >
+                <motion.div
+                  className="relative w-8 h-8 md:w-10 md:h-10"
+                  whileHover={{ rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={breizhLogo.src}
+                    alt="Breizh Web Solution"
+                    className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
+                  />
+                </motion.div>
+                <div className="text-center">
+                  <p className="text-xs md:text-sm font-medium">
+                    Site créé par <span className="text-elvis-gold font-semibold">Breizh Web Solution</span>
+                  </p>
+                </div>
+              </motion.a>
+            </motion.div>
           </div>
         </div>
       </div>
